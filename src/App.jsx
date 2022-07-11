@@ -1,12 +1,12 @@
 import React from 'react';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
     <>
-      <h1>ibrahim borba</h1>
-      <nav>
-        <p>Projects</p>
-      </nav>
+      <Header />
+      <Footer />
     </>
   );
 }
