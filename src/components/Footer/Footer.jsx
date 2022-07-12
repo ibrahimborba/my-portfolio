@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <p>
-        A Trybe project developed by Ibrahim Borba
+        Ibrahim Borba
         <span>&copy;</span>
         , 2022
       </p>

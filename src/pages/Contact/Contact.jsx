@@ -2,14 +2,14 @@ import React from 'react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 
-function Home() {
+function Contact() {
   return (
     <>
       <Header />
-      <h1>Home</h1>
+      <h1>Contact</h1>
       <Footer />
     </>
   );
 }
 
-export default Home;
+export default Contact;

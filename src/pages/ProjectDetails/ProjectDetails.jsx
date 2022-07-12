@@ -1,15 +1,18 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 
-function Home() {
+function ProjectDetails() {
+  const { id } = useParams();
+
   return (
     <>
       <Header />
-      <h1>Home</h1>
+      <h1>{`Project ${id}`}</h1>
       <Footer />
     </>
   );
 }
 
-export default Home;
+export default ProjectDetails;
