@@ -2,19 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import GlobalTheme from './styles/GlobalTheme';
+import GlobalTheme from './GlobalTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={GlobalTheme}>
     <React.StrictMode>
+      <CssBaseline />
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </React.StrictMode>
-    ,
   </ThemeProvider>,
 );
 
