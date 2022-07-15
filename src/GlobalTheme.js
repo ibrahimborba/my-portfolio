@@ -3,14 +3,16 @@ import { createTheme } from '@mui/material/styles';
 const GlobalTheme = createTheme({
   palette: {
     primary: {
-      main: '#3949ab',
+      main: '#0d47a1',
+    },
+    secondary: {
+      main: '#ffb300',
     },
   },
 
   typography: {
     fontFamily: [
       'Montserrat',
-      'BlinkMacSystemFont',
       '"Helvetica Neue"',
       'sans-serif',
     ].join(','),
@@ -23,7 +25,7 @@ const GlobalTheme = createTheme({
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          backgroundColor: '#232323',
+          color: '#232323',
           padding: '20px',
         },
       },
@@ -33,7 +35,18 @@ const GlobalTheme = createTheme({
       styleOverrides: {
         root: {
           color: '#232323',
+          fontWeight: 700,
           textDecoration: 'none',
+          textTransform: 'uppercase',
+          transition: '0.1s',
+
+          '&:hover': {
+            borderBottom: '3px solid #ffb300',
+          },
+        },
+
+        focusVisible: {
+          border: '3px solid #0d47a1',
         },
       },
     },
