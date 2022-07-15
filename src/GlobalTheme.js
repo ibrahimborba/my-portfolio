@@ -6,8 +6,12 @@ const GlobalTheme = createTheme({
       main: '#0d47a1',
     },
     secondary: {
-      main: '#ffb300',
+      main: '#ffc107',
     },
+    neutral: {
+      main: '#f5f5f5',
+    },
+
   },
 
   typography: {
@@ -43,10 +47,10 @@ const GlobalTheme = createTheme({
           '&:hover': {
             borderBottom: '3px solid #ffb300',
           },
-        },
 
-        focusVisible: {
-          border: '3px solid #0d47a1',
+          '&.Mui-focusVisible': {
+            border: '3px solid #0d47a1',
+          },
         },
       },
     },
