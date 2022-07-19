@@ -3,15 +3,14 @@ import { createTheme } from '@mui/material/styles';
 const GlobalTheme = createTheme({
   palette: {
     primary: {
-      main: '#0d47a1',
-    },
-    secondary: {
-      main: '#ffc107',
-    },
-    neutral: {
       main: '#f5f5f5',
     },
-
+    secondary: {
+      main: '#212121',
+    },
+    accent: {
+      main: '#ffa000',
+    },
   },
 
   typography: {

@@ -1,48 +1,105 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import AppBar from '@mui/material/AppBar';
+import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import Toolbar from '@mui/material/Toolbar';
+import Tooltip from '@mui/material/Tooltip';
 import Logo from '../../images/Logo.png';
-import HeaderStyles from './HeaderStyles';
 
 function Header() {
+  const [navTabValue, setNavTabValue] = useState(3);
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+  const navigate = useNavigate();
   const { pathname } = useLocation();
 
+  useEffect(() => {
+    switch (pathname) {
+      case '/projects':
+        setNavTabValue(0);
+        break;
+      case '/about':
+        setNavTabValue(1);
+        break;
+      case '/contact':
+        setNavTabValue(2);
+        break;
+      default:
+        setNavTabValue(3);
+        break;
+    }
+  }, [pathname]);
+
+  const goToHome = () => {
+    navigate('/');
+  };
+
+  const toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    setIsDrawerOpen(open);
+  };
+
   return (
-    <header>
-      <Box sx={HeaderStyles.container}>
-        <h1>
-          <Link
-            href="/"
-            sx={HeaderStyles.link_home}
+    <AppBar position="static">
+      <Toolbar disableGutters>
+        <Box sx={{ flexGrow: 1 }}>
+          <Tooltip title="Go to Home page" placement="bottom-end">
+            <IconButton onClick={goToHome}>
+              <Avatar alt="logo and navigate to home page" src={Logo} />
+            </IconButton>
+          </Tooltip>
+        </Box>
+        <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
+          <IconButton
+            size="large"
+            aria-label="pages navigation"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={toggleDrawer(true)}
+            color="inherit"
           >
-            <img style={{ width: '40px' }} src={Logo} alt="ibrahim borba logo and link to home" />
-          </Link>
-        </h1>
-        <nav>
-          <Box sx={HeaderStyles.container_nav}>
-            <Link
-              href="/projects"
-              sx={pathname === '/projects' && HeaderStyles.link_active}
+            <MenuIcon />
+          </IconButton>
+          <Drawer
+            anchor="right"
+            open={isDrawerOpen}
+            onClose={toggleDrawer(false)}
+          >
+            <Tabs
+              value={navTabValue}
+              aria-label="navigation tabs"
+              textColor="secondary"
+              indicatorColor="secondary"
+              orientation="vertical"
+              sx={{ width: '200px' }}
             >
-              Projects
-            </Link>
-            <Link
-              href="/about"
-              sx={pathname === '/about' && HeaderStyles.link_active}
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              sx={pathname === '/contact' && HeaderStyles.link_active}
-            >
-              Contact
-            </Link>
-          </Box>
-        </nav>
-      </Box>
-    </header>
+              <Tab label="Projects" href="/projects" aria-label="projects tab" />
+              <Tab label="About" href="/about" aria-label="about tab" />
+              <Tab label="Contact" href="/contact" aria-label="contact tab" />
+            </Tabs>
+          </Drawer>
+        </Box>
+        <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+          <Tabs
+            value={navTabValue}
+            aria-label="navigation tabs"
+            textColor="secondary"
+            indicatorColor="secondary"
+          >
+            <Tab label="Projects" href="/projects" aria-label="projects tab" />
+            <Tab label="About" href="/about" aria-label="about tab" />
+            <Tab label="Contact" href="/contact" aria-label="contact tab" />
+          </Tabs>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }
 
