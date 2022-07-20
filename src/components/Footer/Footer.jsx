@@ -8,9 +8,9 @@ function Footer() {
   return (
     <footer>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+        <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }} color="neutral">
           <Toolbar>
-            <Typography align="center" variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography align="center" variant="body1" component="div" sx={{ flexGrow: 1 }}>
               Ibrahim Borba
               <span>&copy;</span>
               , 2022

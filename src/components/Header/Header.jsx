@@ -47,7 +47,11 @@ function Header() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      color="transparent"
+      elevation={0}
+    >
       <Toolbar disableGutters>
         <Box sx={{ flexGrow: 1 }}>
           <Tooltip title="Go to Home page" placement="bottom-end">
@@ -75,7 +79,7 @@ function Header() {
             <Tabs
               value={navTabValue}
               aria-label="navigation tabs"
-              textColor="secondary"
+              textColor="primary"
               indicatorColor="secondary"
               orientation="vertical"
               sx={{ width: '200px' }}
@@ -90,7 +94,7 @@ function Header() {
           <Tabs
             value={navTabValue}
             aria-label="navigation tabs"
-            textColor="secondary"
+            textColor="primary"
             indicatorColor="secondary"
           >
             <Tab label="Projects" href="/projects" aria-label="projects tab" />

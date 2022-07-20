@@ -3,57 +3,49 @@ import { createTheme } from '@mui/material/styles';
 const GlobalTheme = createTheme({
   palette: {
     primary: {
-      main: '#f5f5f5',
-    },
-    secondary: {
       main: '#212121',
     },
-    accent: {
+    secondary: {
       main: '#ffa000',
+    },
+    neutral: {
+      main: '#f5f5f5',
     },
   },
 
   typography: {
     fontFamily: [
       'Montserrat',
-      '"Helvetica Neue"',
+      'Helvetica',
       'sans-serif',
     ].join(','),
-  },
 
-  components: {
-    MuiBox: {
-      styleOverrides: {
-        root: {
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'row',
-          color: '#232323',
-          padding: '20px',
-        },
-      },
+    h1: {
+      fontFamily: [
+        '"Orelega One"',
+        'Garamond',
+        'serif',
+      ].join(','),
     },
 
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          color: '#232323',
-          fontWeight: 700,
-          textDecoration: 'none',
-          textTransform: 'uppercase',
-          transition: '0.1s',
+    h2: {
+      fontFamily: [
+        '"Orelega One"',
+        'Garamond',
+        'serif',
+      ].join(','),
+    },
 
-          '&:hover': {
-            borderBottom: '3px solid #ffb300',
-          },
+    subtitle2: {
+      fontSize: '1rem',
+    },
 
-          '&.Mui-focusVisible': {
-            border: '3px solid #0d47a1',
-          },
-        },
-      },
+    body2: {
+      fontSize: '1.1rem',
+      fontWeight: '700',
     },
   },
+
 });
 
 export default GlobalTheme;
