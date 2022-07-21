@@ -21,6 +21,7 @@ const GlobalTheme = createTheme({
     ].join(','),
 
     h1: {
+      fontSize: '5rem',
       fontFamily: [
         '"Orelega One"',
         'Garamond',
@@ -29,6 +30,7 @@ const GlobalTheme = createTheme({
     },
 
     h2: {
+      fontSize: '3rem',
       fontFamily: [
         '"Orelega One"',
         'Garamond',
@@ -36,13 +38,18 @@ const GlobalTheme = createTheme({
       ].join(','),
     },
 
-    subtitle2: {
+    subtitle1: {
       fontSize: '1rem',
+      fontWeight: '600',
     },
 
-    body2: {
+    subtitle2: {
       fontSize: '1.1rem',
       fontWeight: '700',
+    },
+
+    body1: {
+      fontSize: '0.9rem',
     },
   },
 

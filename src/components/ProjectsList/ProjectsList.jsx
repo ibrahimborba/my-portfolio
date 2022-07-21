@@ -1,18 +1,22 @@
 import React from 'react';
 import Link from '@mui/material/Link';
-import ImageList from '@mui/material/ImageList';
+// import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Container } from '@mui/material';
+import Stack from '@mui/material/Stack';
+// import { Container } from '@mui/material';
 import projects from '../../services/projects';
 
 function ProjectsList() {
   return (
-    <Container sx={{ width: '100vw', overflow: 'scroll' }}>
-      <ImageList gap={2} cols={3}>
-        {
+    <Stack
+      direction={{ xs: 'column', sm: 'row' }}
+      spacing={2}
+      sx={{ width: '80vw', alignItems: 'center', justifyContent: 'center' }}
+    >
+      {
             projects.map((project) => (
-              <ImageListItem sx={{ width: 350 }} key={project.title}>
+              <ImageListItem sx={{ width: 300 }} key={project.title}>
                 <img
                   src={project.image}
                   alt={project.title}
@@ -26,8 +30,7 @@ function ProjectsList() {
               </ImageListItem>
             ))
           }
-      </ImageList>
-    </Container>
+    </Stack>
   );
 }
 
