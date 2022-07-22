@@ -10,7 +10,7 @@ import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
-import Logo from '../../images/Logo.png';
+import logo from '../../images/logo.png';
 
 function Header() {
   const [navTabValue, setNavTabValue] = useState(3);
@@ -56,7 +56,7 @@ function Header() {
         <Box sx={{ flexGrow: 1 }}>
           <Tooltip title="Go to Home page" placement="bottom-end">
             <IconButton onClick={goToHome}>
-              <Avatar alt="logo and navigate to home page" src={Logo} />
+              <Avatar alt="logo and navigate to home page" src={logo} />
             </IconButton>
           </Tooltip>
         </Box>
