@@ -12,7 +12,7 @@ function AvaiableAt() {
   return (
     <StyledBox>
       <Typography variant="h2" gutterBottom align="center">
-        I&apos;m also avaiable at:
+        You can find me at:
       </Typography>
       <ButtonGroup variant="text" aria-label="avaiable links">
         <Link href="https://www.linkedin.com/in/ibrahimborba/" target="_blank">
