@@ -3,11 +3,13 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import CardMedia from '@mui/material/CardMedia';
 import { Footer } from '../../components/Footer';
 import { StyledBox } from '../../styles/GlobalTheme';
 import { Header } from '../../components/Header';
 import { ProjectsList } from '../../components/ProjectsList';
-import AvaiableAt from '../../components/AvaiableAt/AvaiableAt';
+import { AvaiableAt } from '../../components/AvaiableAt';
+import cover from '../../images/cover.png';
 
 function Home() {
   return (
@@ -18,17 +20,29 @@ function Home() {
         spacing={2}
         sx={{ p: 5, marginBottom: { md: '50px', xs: '100px' } }}
       >
-        <Box sx={{ p: 4 }}>
-          <Typography variant="subtitle1" gutterBottom sx={{ maxWidth: '520px' }}>
-            {/* eslint-disable-next-line max-len -- Unable full text content   */}
-            Hi, welcome to my Portfolio! I&apos;m a
-            <Typography variant="subtitle2" display="inline"> Jr. Web Developer </Typography>
-            passionate about creating apps that impact people&apos;s lives.
-          </Typography>
-          <Typography variant="h1">
-            Ibrahim Borba
-          </Typography>
-        </Box>
+        <Stack direction="row" justifyContent="center">
+          <Box sx={{ p: 4 }}>
+            <Typography variant="subtitle1" gutterBottom sx={{ maxWidth: '520px', mb: 3 }}>
+              {/* eslint-disable-next-line max-len -- Unable full text content   */}
+              Hi, welcome to my Portfolio! I&apos;m a
+              <Typography variant="subtitle2" display="inline"> Jr. Web Developer </Typography>
+              passionate about creating apps that impact people&apos;s lives.
+            </Typography>
+            <Typography variant="h1">
+              Ibrahim Borba
+            </Typography>
+          </Box>
+          <CardMedia
+            alt="painting code"
+            component="img"
+            image={cover}
+            sx={{
+              height: 350,
+              width: 600,
+              display: { xs: 'none', md: 'flex' },
+            }}
+          />
+        </Stack>
         <StyledBox>
           <Typography variant="h2" gutterBottom>
             Projects
