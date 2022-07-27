@@ -52,7 +52,7 @@ function Header() {
       color="transparent"
       elevation={0}
     >
-      <Toolbar disableGutters>
+      <Toolbar>
         <Box sx={{ flexGrow: 1 }}>
           <Tooltip title="Go to Home page" placement="bottom-end">
             <IconButton onClick={goToHome}>
