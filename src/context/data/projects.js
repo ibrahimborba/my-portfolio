@@ -1,4 +1,4 @@
-import coverCookBook from '../images/projects/CookBook/cover.png';
+import coverCookBook from '../../images/projects/CookBook/cover.png';
 
 const projects = [
   {

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from '@mui/material/Link';
-// import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Stack from '@mui/material/Stack';
-// import { Container } from '@mui/material';
-import projects from '../../services/projects';
+import { ProjectsContext } from '../../context/ProjectsContext';
 
 function ProjectsList() {
+  const { projects } = useContext(ProjectsContext);
+
   return (
     <Stack
       direction={{ xs: 'column', sm: 'row' }}
