@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
@@ -7,12 +7,15 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { StyledBox } from '../../styles/GlobalTheme';
+import { ContentContext } from '../../context/ContentContext';
 
 function AvaiableAt() {
+  const { content: { avaiable } } = useContext(ContentContext);
+
   return (
     <StyledBox>
       <Typography variant="h2" gutterBottom align="center">
-        You can find me at:
+        {avaiable.title}
       </Typography>
       <ButtonGroup variant="text" aria-label="avaiable links">
         <Link href="https://www.linkedin.com/in/ibrahimborba/" target="_blank">
