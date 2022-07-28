@@ -31,7 +31,7 @@ function ProjectsList() {
       }}
       >
         <CardContent>
-          <Typography gutterBottom variant="h2">
+          <Typography gutterBottom variant="h2" color="text.secondary">
             { projectList.soon }
           </Typography>
         </CardContent>
