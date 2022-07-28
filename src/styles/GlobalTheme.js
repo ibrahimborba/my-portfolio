@@ -39,6 +39,15 @@ export const GlobalTheme = createTheme({
       ].join(','),
     },
 
+    h5: {
+      fontSize: '2rem',
+      fontFamily: [
+        '"Orelega One"',
+        'Garamond',
+        'serif',
+      ].join(','),
+    },
+
     subtitle1: {
       fontSize: '1rem',
       fontWeight: '600',
@@ -51,6 +60,10 @@ export const GlobalTheme = createTheme({
 
     body1: {
       fontSize: '0.9rem',
+    },
+
+    body2: {
+      fontSize: '0.7rem',
     },
   },
 

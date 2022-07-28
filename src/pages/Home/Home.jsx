@@ -41,7 +41,7 @@ function Home() {
             <Typography variant="subtitle1" gutterBottom sx={{ maxWidth: '520px', mb: 3 }}>
               {/* eslint-disable-next-line max-len -- Unable full text content   */}
               Hi, welcome to my Portfolio! I&apos;m a
-              <Typography variant="subtitle2" display="inline"> Jr. Web Developer </Typography>
+              <Typography variant="subtitle2" display="inline"> Web Developer </Typography>
               passionate about creating apps that impact people&apos;s lives.
             </Typography>
             <Typography variant="h1">

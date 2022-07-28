@@ -3,21 +3,21 @@ import coverCookBook from '../../images/projects/CookBook/cover.png';
 const projects = [
   {
     title: 'CookBook',
-    subtitle: 'A Recipe App that helps its users to find new recipes',
+    subtitle: 'A Recipes App that helps its users to find new recipes.',
     image: coverCookBook,
-    url: '/project/CookBook',
+    urlDetail: '/project/CookBook',
+    urlGitHub: 'https://github.com/ibrahimborba/recipes-app-cookbook',
+    urlDeploy: 'https://cookbook-recipes-app.web.app/',
+    technologies: 'React, Redux, Testing Library, Styled Components',
   },
   {
     title: 'TrybeWallet',
     subtitle: 'A Recipe App that helps its users to find new recipes',
     image: coverCookBook,
-    url: '/project/TrybeWallet',
-  },
-  {
-    title: 'Project',
-    subtitle: 'A Recipe App that helps its users to find new recipes',
-    image: coverCookBook,
-    url: '/project/TrybeWallet',
+    urlDetail: '/project/TrybeWallet',
+    urlGitHub: 'https://github.com/ibrahimborba/recipes-app-cookbook',
+    urlDeploy: 'https://cookbook-recipes-app.web.app/',
+    technologies: 'React, Redux, Testing Library, Styled Components',
   },
 ];
 
