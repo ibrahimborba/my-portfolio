@@ -7,7 +7,7 @@ const content = {
   },
 
   footer: {
-    text: 'Developed with React, React Testing Library and Material UI.',
+    text: 'Developed with React, RTL and Material UI.',
   },
 
   avaiable: {

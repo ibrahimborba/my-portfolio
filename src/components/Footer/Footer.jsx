@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import AppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Stack, Tooltip } from '@mui/material';
+import { ContentContext } from '../../context/ContentContext';
 
 function Footer() {
+  const { content: { footer } } = useContext(ContentContext);
+
   return (
     <AppBar
       position="fixed"
@@ -36,7 +39,7 @@ function Footer() {
           component="p"
           sx={{ flexGrow: 0 }}
         >
-          Developed with React, React Testing Library and Material UI.
+          {footer.text}
           <Tooltip title="Go to Portfolio GitHub repository" placement="top-start">
             <IconButton
               aria-label="portfolio github link"

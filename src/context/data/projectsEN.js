@@ -10,15 +10,6 @@ const projects = [
     urlDeploy: 'https://cookbook-recipes-app.web.app/',
     technologies: 'React, Redux, Testing Library, Styled Components',
   },
-  {
-    title: 'TrybeWallet',
-    subtitle: 'A Recipe App that helps its users to find new recipes',
-    image: coverCookBook,
-    urlDetail: '/project/TrybeWallet',
-    urlGitHub: 'https://github.com/ibrahimborba/recipes-app-cookbook',
-    urlDeploy: 'https://cookbook-recipes-app.web.app/',
-    technologies: 'React, Redux, Testing Library, Styled Components',
-  },
 ];
 
 export default projects;
