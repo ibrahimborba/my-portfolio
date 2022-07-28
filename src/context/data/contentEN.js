@@ -20,6 +20,10 @@ const content = {
     visitHere: 'Visit here',
   },
 
+  projectList: {
+    soon: 'Soon...',
+  },
+
   // Pages
   home: {
     intro: "Hi, welcome to my Portfolio! I'm a Web Developer passionate about creating apps that impact people's lives.",

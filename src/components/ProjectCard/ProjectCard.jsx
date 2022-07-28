@@ -15,9 +15,14 @@ function ProjectCard({ project, hasDetails }) {
   const { content: { projectCard } } = useContext(ContentContext);
 
   return (
-    <Card sx={hasDetails && {
+    <Card sx={hasDetails ? {
       display: 'flex',
       flexDirection: { xs: 'column', sm: 'row' },
+    } : {
+      display: 'flex',
+      flexDirection: 'column',
+      maxWidth: '280px',
+      maxHeight: '420px',
     }}
     >
       <CardMedia
@@ -30,7 +35,7 @@ function ProjectCard({ project, hasDetails }) {
       <Box>
         <CardActionArea href={project.urlDetail}>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h5">
               {project.title}
             </Typography>
             <Typography variant="body1" color="text.secondary">
