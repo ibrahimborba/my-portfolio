@@ -1,7 +1,6 @@
 import { createTheme } from '@mui/material/styles';
-import { Box, styled } from '@mui/material';
 
-export const GlobalTheme = createTheme({
+const GlobalTheme = createTheme({
   palette: {
     primary: {
       main: '#212121',
@@ -69,8 +68,4 @@ export const GlobalTheme = createTheme({
 
 });
 
-export const StyledBox = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+export default GlobalTheme;

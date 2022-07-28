@@ -5,7 +5,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { GlobalTheme } from './styles/GlobalTheme';
+import GlobalTheme from './styles/GlobalTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
