@@ -17,6 +17,7 @@ function Projects() {
           p: { xs: 3, md: 6 },
           justifyContent: 'center',
           alignItems: 'center',
+          marginBottom: { md: '50px', xs: '100px' },
         }}
       >
         {
