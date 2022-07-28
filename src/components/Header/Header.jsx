@@ -1,22 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+/* import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem'; */
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
+// import LanguageIcon from '@mui/icons-material/Language';
+import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../images/logo.png';
+import { ContentContext } from '../../context/ContentContext';
 
 function Header() {
   const [navTabValue, setNavTabValue] = useState(3);
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { content: { header } } = useContext(ContentContext);
 
   useEffect(() => {
     switch (pathname) {
@@ -45,6 +50,17 @@ function Header() {
     }
     setIsDrawerOpen(open);
   };
+
+  /*   const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  }; */
 
   return (
     <AppBar
@@ -84,8 +100,8 @@ function Header() {
               orientation="vertical"
               sx={{ width: '200px' }}
             >
-              <Tab label="Projects" href="/projects" aria-label="projects tab" />
-              <Tab label="About" href="/about" aria-label="about tab" />
+              <Tab label={header.navProjects} href="/projects" aria-label="projects tab" />
+              <Tab label={header.navAbout} href="/about" aria-label="about tab" />
               {/* <Tab label="Contact" href="/contact" aria-label="contact tab" /> */}
             </Tabs>
           </Drawer>
@@ -97,10 +113,31 @@ function Header() {
             textColor="primary"
             indicatorColor="secondary"
           >
-            <Tab label="Projects" href="/projects" aria-label="projects tab" />
-            <Tab label="About" href="/about" aria-label="about tab" />
+            <Tab label={header.navProjects} href="/projects" aria-label="projects tab" />
+            <Tab label={header.navAbout} href="/about" aria-label="about tab" />
             {/* <Tab label="Contact" href="/contact" aria-label="contact tab" /> */}
           </Tabs>
+          {/*           <IconButton
+            id="basic-button"
+            aria-controls={open ? 'basic-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+          >
+            <LanguageIcon />
+          </IconButton>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}
+          >
+            <MenuItem onClick={changeLang('en')}>English</MenuItem>
+            <MenuItem onClick={changeLang('pt-br')}>Português (Brasil)</MenuItem>
+          </Menu> */}
         </Box>
       </Toolbar>
     </AppBar>

@@ -6,11 +6,11 @@ import { ProjectDetails } from './pages/ProjectDetails';
 import { About } from './pages/About';
 // import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
-import ProjectsProvider from './context/ProjectsContext';
+import ContentProvider from './context/ContentContext';
 
 function App() {
   return (
-    <ProjectsProvider>
+    <ContentProvider>
       <Routes>
         <Route path="/project/:id" element={<ProjectDetails />} />
         <Route path="/projects" element={<Projects />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </ProjectsProvider>
+    </ContentProvider>
   );
 }
 

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import Stack from '@mui/material/Stack';
-import { ProjectsContext } from '../../context/ProjectsContext';
+import { ContentContext } from '../../context/ContentContext';
 import { ProjectCard } from '../ProjectCard';
 
 function ProjectsList() {
-  const { projects } = useContext(ProjectsContext);
+  const { projects } = useContext(ContentContext);
 
   return (
     <Stack
