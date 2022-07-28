@@ -60,7 +60,7 @@ function Header() {
             </IconButton>
           </Tooltip>
         </Box>
-        <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
+        <Box sx={{ flexGrow: 0, display: { xs: 'flex', sm: 'none' } }}>
           <IconButton
             size="large"
             aria-label="pages navigation"
@@ -86,11 +86,11 @@ function Header() {
             >
               <Tab label="Projects" href="/projects" aria-label="projects tab" />
               <Tab label="About" href="/about" aria-label="about tab" />
-              <Tab label="Contact" href="/contact" aria-label="contact tab" />
+              {/* <Tab label="Contact" href="/contact" aria-label="contact tab" /> */}
             </Tabs>
           </Drawer>
         </Box>
-        <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+        <Box sx={{ flexGrow: 0, display: { xs: 'none', sm: 'flex' } }}>
           <Tabs
             value={navTabValue}
             aria-label="navigation tabs"
@@ -99,7 +99,7 @@ function Header() {
           >
             <Tab label="Projects" href="/projects" aria-label="projects tab" />
             <Tab label="About" href="/about" aria-label="about tab" />
-            <Tab label="Contact" href="/contact" aria-label="contact tab" />
+            {/* <Tab label="Contact" href="/contact" aria-label="contact tab" /> */}
           </Tabs>
         </Box>
       </Toolbar>
