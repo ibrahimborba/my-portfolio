@@ -47,7 +47,7 @@ function ProjectCard({ project, hasDetails }) {
               color="primary"
               href={project.urlDetail}
               endIcon={<EastIcon />}
-              sx={{ mb: 2 }}
+              sx={{ mb: 2, fontWeight: 'bold' }}
             >
               {projectCard.readMore}
             </Button>
