@@ -14,6 +14,12 @@ const content = {
     title: 'You can find me at:',
   },
 
+  projectCard: {
+    readMore: 'Read more',
+    madeWith: 'Made with:',
+    visitHere: 'Visit here',
+  },
+
   // Pages
   home: {
     intro: "Hi, welcome to my Portfolio! I'm a Web Developer passionate about creating apps that impact people's lives.",

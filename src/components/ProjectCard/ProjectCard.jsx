@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -9,8 +9,11 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EastIcon from '@mui/icons-material/East';
+import { ContentContext } from '../../context/ContentContext';
 
 function ProjectCard({ project, hasDetails }) {
+  const { content: { projectCard } } = useContext(ContentContext);
+
   return (
     <Card sx={hasDetails && {
       display: 'flex',
@@ -41,13 +44,13 @@ function ProjectCard({ project, hasDetails }) {
               endIcon={<EastIcon />}
               sx={{ mb: 2 }}
             >
-              Read more
+              {projectCard.readMore}
             </Button>
             {
               hasDetails && (
                 <>
                   <Typography variant="body1" color="text.secondary">
-                    Made with:
+                    {projectCard.madeWith}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     {project.technologies}
@@ -78,7 +81,7 @@ function ProjectCard({ project, hasDetails }) {
               target="_blank"
               endIcon={<EastIcon />}
             >
-              Visit here
+              {projectCard.visitHere}
             </Button>
           </CardActions>
           )
