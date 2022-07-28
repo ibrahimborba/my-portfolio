@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
@@ -8,8 +8,11 @@ import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 import { AvaiableAt } from '../../components/AvaiableAt';
 import profile from '../../images/profile.png';
+import { ContentContext } from '../../context/ContentContext';
 
 function About() {
+  const { content: { about } } = useContext(ContentContext);
+
   return (
     <>
       <Header />
@@ -22,15 +25,13 @@ function About() {
         <Stack direction="row">
           <Box sx={{ p: 0, maxWidth: '550px' }}>
             <Typography variant="h2" sx={{ mb: 2 }}>
-              I&apos;m an aspiring Web Developer who loves to create
+              {about.title}
             </Typography>
             <Typography variant="subtitle1" gutterBottom sx={{ mb: 2 }}>
-              {/* eslint-disable-next-line max-len -- Unable full text content  */}
-              Through my career, I&apos;ve always been passionate about technology and how it can create a positive impact in people&apos;s lives. Which lead me to transition from architecture to development.
+              {about.paragraph1}
             </Typography>
             <Typography variant="subtitle1" gutterBottom>
-              {/* eslint-disable-next-line max-len -- Unable full text content  */}
-              My goals are to always learn and improve as a programmer. And to create apps that will give a pleasant experience to its users and make their lives better.
+              {about.paragraph2}
             </Typography>
           </Box>
           <Avatar
@@ -40,7 +41,7 @@ function About() {
               ml: 10,
               width: 250,
               height: 250,
-              filter: 'grayscale(100%) contrast(90%) brightness(105%)',
+              filter: 'grayscale(100%) contrast(105%) brightness(105%)',
               display: { xs: 'none', md: 'flex' },
             }}
           >
