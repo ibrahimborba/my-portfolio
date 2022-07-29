@@ -34,7 +34,7 @@ npm start
 # Notes
 ## Git, GitHub and Commit History
 - This project used the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) with some types from [Angular convention](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
-- Since this is a solo project, there is only on branch (_development_) for development.
+- Since this is a solo project, there are two branches. One for development (_development_) and another for building (_build_).
 ## Lint
 - The project was developed following the Clean Code standards specified by [Airbnb's Lint](https://www.npmjs.com/package/eslint-config-airbnb).
 
