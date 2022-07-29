@@ -30,7 +30,7 @@ function ProjectCard({ project, hasDetails }) {
         height="260"
         image={project.image}
         alt={project.title}
-        sx={{ width: 260 }}
+        sx={{ width: 280 }}
       />
       <Box>
         <CardActionArea href={project.urlDetail}>
