@@ -17,7 +17,6 @@ function NotFound() {
       sx={{
         p: 5,
         height: '100vh',
-        marginBottom: { md: '50px', xs: '100px' },
         justifyContent: { md: 'center', xs: 'end' },
         backgroundImage: { md: 'none', xs: `url(${notfound})` },
         backgroundSize: 'contain',

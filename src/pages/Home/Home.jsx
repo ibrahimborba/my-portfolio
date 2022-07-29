@@ -41,7 +41,7 @@ function Home() {
             }}
           />
           <Box sx={{ p: { md: 6, sm: 2, xs: 0 } }}>
-            <Typography variant="subtitle1" gutterBottom sx={{ maxWidth: '520px', mb: 3 }}>
+            <Typography variant="subtitle2" gutterBottom sx={{ maxWidth: '520px', mb: 3 }}>
               {home.intro}
             </Typography>
             <Typography variant="h1">

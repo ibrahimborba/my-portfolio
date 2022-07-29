@@ -38,6 +38,11 @@ const GlobalTheme = createTheme({
       ].join(','),
     },
 
+    h3: {
+      fontSize: '1.5rem',
+      fontWeight: '600',
+    },
+
     h5: {
       fontSize: '2rem',
       fontFamily: [
@@ -49,7 +54,7 @@ const GlobalTheme = createTheme({
 
     subtitle1: {
       fontSize: '1rem',
-      fontWeight: '600',
+      fontWeight: '500',
     },
 
     subtitle2: {
