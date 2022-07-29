@@ -7,7 +7,7 @@ const content = {
   },
 
   footer: {
-    text: 'Developed with React, RTL and Material UI.',
+    text: 'Made with React and Material UI. Built with Firebase',
   },
 
   avaiable: {
