@@ -38,7 +38,7 @@ const content = {
 
   notFound: {
     title: 'Oops! That\'s unexpected.',
-    text: 'We couldn\'t find the page you are looking for.',
+    text: 'We couldn\'t find the page you were looking for.',
     backTo: 'Back to Home',
   },
 };
