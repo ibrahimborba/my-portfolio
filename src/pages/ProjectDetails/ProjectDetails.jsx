@@ -111,6 +111,12 @@ function ProjectDetails() {
               <Typography gutterBottom variant="subtitle1" component="h5">
                 {development.text1}
               </Typography>
+              <Typography gutterBottom variant="subtitle1" component="h5">
+                {development.text2}
+              </Typography>
+              <Typography gutterBottom variant="subtitle1" component="h5">
+                {development.text3}
+              </Typography>
             </Stack>
           ))
         }

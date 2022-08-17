@@ -3,9 +3,9 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import contentEN from './data/contentEN';
-// import contentPT from './data/contentPT';
+import contentPT from './data/contentPT';
 import projectsEN from './data/projectsEN';
-// import projectsPT from './data/projectsPT';
+import projectsPT from './data/projectsPT';
 import { getLang, updateLang } from '../services/languageLocalStg';
 
 export const ContentContext = createContext();
@@ -13,7 +13,7 @@ export const ContentContext = createContext();
 export default function ContentProvider({ children }) {
   const [projects, setProjects] = useState(projectsEN);
   const [content, setContent] = useState(contentEN);
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('pt-br');
 
   useEffect(() => {
     setLanguage(getLang());
@@ -22,14 +22,14 @@ export default function ContentProvider({ children }) {
         setContent(contentEN);
         setProjects(projectsEN);
         break;
-        /*       case 'pt-br':
+      case 'pt-br':
         setContent(contentPT);
         setProjects(projectsPT);
-        break; */
+        break;
       default:
         break;
     }
-  }, []);
+  }, [language]);
 
   const changeLang = (lang) => () => {
     setLanguage(lang);

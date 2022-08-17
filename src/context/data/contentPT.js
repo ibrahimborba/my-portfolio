@@ -26,7 +26,7 @@ const content = {
 
   // Pages
   home: {
-    intro: 'Olá, boas vindas ao meu Portfolio! Sou um Desenvolvedor Web apaixonado por criar aplicativos que impactem a vida das pessoas',
+    intro: 'Olá, boas vindas ao meu Portfólio! Sou um Desenvolvedor Web apaixonado por criar aplicativos que impactem a vida das pessoas',
     projectTitle: 'Projetos',
   },
 
@@ -39,7 +39,7 @@ const content = {
   notFound: {
     title: 'Opa! Isso não foi planejado.',
     text: 'Não conseguimos encontrar a paǵina que você estava procurando.',
-    backTo: 'De volta para Home',
+    backTo: 'Voltar para Página Inicial',
   },
 };
 
