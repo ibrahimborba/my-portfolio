@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
@@ -104,6 +105,9 @@ function Header() {
               <Tab label={header.navAbout} href="/about" aria-label="about tab" />
               {/* <Tab label="Contact" href="/contact" aria-label="contact tab" /> */}
             </Tabs>
+            <Divider />
+            <MenuItem onClick={changeLang('en')}>English</MenuItem>
+            <MenuItem onClick={changeLang('pt-br')}>Português (Brasil)</MenuItem>
           </Drawer>
         </Box>
         <Box sx={{ flexGrow: 0, display: { xs: 'none', sm: 'flex' } }}>
