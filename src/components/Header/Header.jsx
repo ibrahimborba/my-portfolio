@@ -5,13 +5,13 @@ import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-/* import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem'; */
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
-// import LanguageIcon from '@mui/icons-material/Language';
+import LanguageIcon from '@mui/icons-material/Language';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../images/logo.png';
 import { ContentContext } from '../../context/ContentContext';
@@ -21,7 +21,7 @@ function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { content: { header } } = useContext(ContentContext);
+  const { content: { header }, changeLang } = useContext(ContentContext);
 
   useEffect(() => {
     switch (pathname) {
@@ -51,7 +51,7 @@ function Header() {
     setIsDrawerOpen(open);
   };
 
-  /*   const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -60,7 +60,7 @@ function Header() {
 
   const handleClose = () => {
     setAnchorEl(null);
-  }; */
+  };
 
   return (
     <AppBar
@@ -117,7 +117,7 @@ function Header() {
             <Tab label={header.navAbout} href="/about" aria-label="about tab" />
             {/* <Tab label="Contact" href="/contact" aria-label="contact tab" /> */}
           </Tabs>
-          {/*           <IconButton
+          <IconButton
             id="basic-button"
             aria-controls={open ? 'basic-menu' : undefined}
             aria-haspopup="true"
@@ -137,7 +137,7 @@ function Header() {
           >
             <MenuItem onClick={changeLang('en')}>English</MenuItem>
             <MenuItem onClick={changeLang('pt-br')}>Português (Brasil)</MenuItem>
-          </Menu> */}
+          </Menu>
         </Box>
       </Toolbar>
     </AppBar>
