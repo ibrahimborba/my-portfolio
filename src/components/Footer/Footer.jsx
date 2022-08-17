@@ -57,7 +57,7 @@ function Footer() {
           align="center"
           variant="body1"
           component="p"
-          sx={{ flexGrow: 0 }}
+          sx={{ flexGrow: 0, display: { sm: 'flex', xs: 'none' } }}
         >
           {footer.text}
           <Tooltip title="Go to Portfolio GitHub repository" placement="top-start">
