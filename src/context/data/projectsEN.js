@@ -23,12 +23,15 @@ const projects = [
       {
         title: 'Project and Team management',
         subtitle: 'Agile Methodologies, Scrum and Kanban',
-        text1: 'We used Kanban to organize, assign and follow tasks progress across the development process. While Scrum was used to define technologies and communication channels (Planning). Update team on task status, assess any obstacles and use pair programming if necessary, and assign new tasks to avaiable members (Dailies). Check the overall project process by the end of it, rise strenghts and possible improvements (Retrospective).',
+        text1: 'We used three steps from Scrum (Planning, Dailies and Rretrospective) and Kanban in a usual way. Aside from the regular features we also defined a few own agreements.',
+        text2: 'Structuring | For configuration, as Redux and Tests initial structure, the whole team cworked together to define and develop the setup.',
+        text3: ' Solving obstacles | In case a member found an obstacle, the member that had more avaiability would help them in a pair programming session. If that didn\'t solve the obstacle, the whole team would join to reach a solution.',
       },
       {
         title: 'Technologies',
         subtitle: 'React, Redux, Testing Library and Styled Components',
-        text1: 'React was used for app componentization, which allowed to reuse code and cut conflicts. Redux was used for State Management, since there were multiple people working, kinds of information and pages. Testing Library was used to test and guarantee code quality. And Styled Components was used to style the app, since the whole app was already being developed using components.',
+        text1: 'We used React for componentization, Redux for state management, RTL for test and e Styled Components for styling.',
+        text2: 'In order to avoid conflicts, each member would develop their own page and create their own reducers and components as needed. If a member used a component or reducer already created and indentified a need to improve that feature, the improvement could be done either by the person who identified the need, or by the person who created the feature.',
       },
     ],
   },
