@@ -1,5 +1,5 @@
-const LANG = 'language';
-const INITIAL_VALUE = 'en';
+const LANG = 'language-imborba';
+const INITIAL_VALUE = 'pt-br';
 
 const readLang = () => {
   if (!localStorage.getItem(LANG)) return localStorage.setItem(LANG, INITIAL_VALUE);
