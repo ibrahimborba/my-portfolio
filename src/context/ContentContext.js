@@ -11,8 +11,8 @@ import { getLang, updateLang } from '../services/languageLocalStg';
 export const ContentContext = createContext();
 
 export default function ContentProvider({ children }) {
-  const [projects, setProjects] = useState(projectsEN);
-  const [content, setContent] = useState(contentEN);
+  const [projects, setProjects] = useState(projectsPT);
+  const [content, setContent] = useState(contentPT);
   const [language, setLanguage] = useState('pt-br');
 
   useEffect(() => {
