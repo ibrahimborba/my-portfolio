@@ -1,4 +1,5 @@
 import coverCookBook from '../../images/projects/CookBook/cover.png';
+import coverBlogsAPI from '../../images/projects/BlogsAPI/cover.png';
 
 const projects = [
   {
@@ -32,6 +33,35 @@ const projects = [
         subtitle: 'React, Redux, Testing Library and Styled Components',
         text1: 'We used React for componentization, Redux for state management, RTL for test and e Styled Components for styling.',
         text2: 'In order to avoid conflicts, each member would develop their own page and create their own reducers and components as needed. If a member used a component or reducer already created and indentified a need to improve that feature, the improvement could be done either by the person who identified the need, or by the person who created the feature.',
+      },
+    ],
+  },
+  {
+    title: 'BlogsAPI',
+    subtitle: 'A Blog for visualizing and publishing posts with user authentication.',
+    image: coverBlogsAPI,
+    urlDetail: '/project/BlogsAPI',
+    urlGitHub: 'https://github.com/ibrahimborba/blogs-api',
+    urlGitHubCTA: 'Repository',
+    urlDeploy: 'https://github.com/ibrahimborba/blogs-api',
+    urlDeployCTA: 'Check out!',
+    technologiesTitle: 'Desenvolvimento',
+    technologies: 'Node.js, Express.js, Sequelize, JWT, Mocha, REST, MSC',
+    introductionText: 'A CRUD and RESTful API, that allows its logged users to visualize and create posts. The APIalso has authentication and authorization steps with token generation on login.',
+    team: { },
+    development: [
+      {
+        title: 'Technologies and Architecture',
+        subtitle: 'Node.js, Express.js, Sequelize, Joi, JWT, REST, MSC',
+        text1: 'Architectures MSC and REST | The project follows MSC and REST architecture patters, and uses ORM Sequelize to manage the Model layer.',
+        text2: 'Validation, authentication and Authorization | Only logged users can visualize and add psots. Only a logged user and post author can edit or delete said post. Request validations are made in Middlewares, before entering the Controller layer. Database validations (if data exists, if the user is valid etc) are made in the Service layer.',
+      },
+      {
+        title: 'Tests',
+        subtitle: 'Mocha, Chai, Sinon, NYC',
+        text1: 'Integration | Used in routes, evaluate the behavior between components.',
+        text2: 'Unit | Used in middlewares, since they\'re smaller and have a great impact in the API performance.',
+        text3: 'Coverage | Tests reach more than 80% coverage, it\'s still missing to test categories routes.',
       },
     ],
   },

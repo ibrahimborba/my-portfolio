@@ -1,4 +1,5 @@
 import coverCookBook from '../../images/projects/CookBook/cover.png';
+import coverBlogsAPI from '../../images/projects/BlogsAPI/cover.png';
 
 const projects = [
   {
@@ -32,6 +33,35 @@ const projects = [
         subtitle: 'React, Redux, Testing Library and Styled Components',
         text1: 'Utilizamos o React para componentização, Redux para gerenciamento de estado, RTL para testes e Styled Components para estilização.',
         text2: 'Para evitar conflitos, cada membro desenvolvia uma paǵina e criava seus próprios reducers e componentes conforme a necessidade. Se um membro aproveitasse um componente ou reducer já criado e identificasse a necessidade de complementar esse recurso, o complemento poderia ser feito tanto pela pessoa que identificou a necessidade, quanto pela pessoa que criou o recurso.',
+      },
+    ],
+  },
+  {
+    title: 'BlogsAPI',
+    subtitle: 'Um Blog para visualização e publicação de posts com verificação de usuário.',
+    image: coverBlogsAPI,
+    urlDetail: '/project/BlogsAPI',
+    urlGitHub: 'https://github.com/ibrahimborba/blogs-api',
+    urlGitHubCTA: 'Repositório',
+    urlDeploy: 'https://github.com/ibrahimborba/blogs-api',
+    urlDeployCTA: 'Veja mais!',
+    technologiesTitle: 'Desenvolvimento',
+    technologies: 'Node.js, Express.js, Sequelize, JWT, Mocha, REST, MSC',
+    introductionText: 'Uma API CRUD e RESTful, que permite ao usuário logado, visualizar e criar posts. A API possui etapas de autenticação e autorização ao gerar um token no login.',
+    team: { },
+    development: [
+      {
+        title: 'Tecnologias e Arquitetura',
+        subtitle: 'Node.js, Express.js, Sequelize, Joi, JWT, REST, MSC',
+        text1: 'Arquiteturas MSC e REST | O projeto segue os padrões das arquiteturas MSC e REST, e usa a ORM Sequelize para gerenciar a camada Model.',
+        text2: 'Validação, Autenticação e Autorização | Apenas usuários logados podem visualizar e adicionar posts. Apenas um usuário logado e autor do post pode editar ou excluir esse post. Validações de input do usuário são feitas em Middlewares, antes de entrar na camada de Controller. Validações do banco de dados (se os dados existem, se o usuário é válido etc) são feitas na camada de Service.',
+      },
+      {
+        title: 'Testes',
+        subtitle: 'Mocha, Chai, Sinon, NYC',
+        text1: 'Integração | Aplicado para as rotas, avaliam o comportamento dos componentes.',
+        text2: 'Unitários | Aplicado para os middlewares, por serem menores e terem grande impacto no desempenho da API.',
+        text3: 'Cobertura | Os testes atingem mais de 80% de cobertura, faltando testar as rotas para categorias dos posts.',
       },
     ],
   },
