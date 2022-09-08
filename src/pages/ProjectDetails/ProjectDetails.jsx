@@ -64,7 +64,6 @@ function ProjectDetails() {
               href={project.urlDeploy}
               target="_blank"
               endIcon={<EastIcon />}
-              sx={{ width: '150px' }}
             >
               {project.urlDeployCTA}
             </Button>
