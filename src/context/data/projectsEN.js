@@ -9,7 +9,7 @@ const projects = [
     urlDetail: '/project/CookBook',
     urlGitHub: 'https://github.com/ibrahimborba/recipes-app-cookbook',
     urlGitHubCTA: 'Repository',
-    urlDeploy: 'https://cookbook-recipes-app.web.app/foods',
+    urlDeploy: 'https://cookbook-recipesapp.web.app/foods',
     urlDeployCTA: 'Try it!',
     technologiesTitle: 'Development',
     technologies: 'React, Redux, Testing Library, Styled Components, Scrum',
